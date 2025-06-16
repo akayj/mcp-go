@@ -37,10 +37,7 @@ func WithClientCapabilities(capabilities mcp.ClientCapabilities) ClientOption {
 // Usage:
 //
 //	stdio := transport.NewStdio("./mcp_server", nil, "xxx")
-//	client, err := NewClient(stdio)
-//	if err != nil {
-//	    log.Fatalf("Failed to create client: %v", err)
-//	}
+//	client := NewClient(stdio)
 func NewClient(transport transport.Interface, options ...ClientOption) *Client {
 	client := &Client{
 		transport: transport,
